@@ -50,7 +50,7 @@ def cursoformulario(request):
        else:
            return render(request, "Appproyect/cursos.html", {"mensaje": "Datos inválidos"})
     else:
-         form = EntregaForm()
+         form = CursoForm()
          return render(request, "Appproyect/cursos.html", {"formulario": form})
 
 def alumformulario(request):
