@@ -92,8 +92,8 @@ def entregables(request):
     return render(request, "Appproyect/entregables.html")
 
 def cursos(request):
-    cursos = Curso.objects.all()
-    return render(request, "Appproyect/cursos.html", {"cursos":cursos})
+    curso = Curso.objects.all()
+    return render(request, "Appproyect/cursos.html", {"cursos":curso})
 
 
 
