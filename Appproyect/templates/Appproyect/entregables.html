@@ -6,19 +6,20 @@
 
 {% block contenido_cambia %}
 <h1>Entregables:</h1>
-<form action="{% url 'entregables' %}"  method="POST"> {% csrf_token %}
+<form action="{% url 'entregables' %}"  method="POST">
+    {% csrf_token %}
     <table>
         {{ formulario.as_table }}
     </table>
-    <input type = "submit" value="GUARDAR DATOS DE LA ENTREGA">
-
+    <input type="submit" value="GUARDAR DATOS DE LA ENTREGA" class="btn btn-primary">
 </form>
 
-    <h3>{{ mensaje }}</h3>
+<h3>{{ mensaje }}</h3>
 {% endblock %}
 
 {% block botonentregables %}
 "btn btn-primary"
 {% endblock %}
+
 
 

@@ -1,0 +1,32 @@
+{% extends "Appproyect/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}ESTA ES LA BUSQUEDA DE COMISIONES {% endblock %}
+
+{% block contenido_cambia %}
+<form action="{% url 'buscar' %}" method="GET">
+    <input type="number" name="comision" id="comision" placeholder="INSERTE COMISION">
+
+    <input type="submit" value="Buscar comision">
+
+</form>
+<h2>{{ mensaje }}</h2>
+{% endblock %}
+
+{% block botonprofes %}
+"btn btn-warning"
+{% endblock %}
+
+{% block botonalumnos %}
+"btn btn-danger"
+{% endblock %}
+
+{% block botoncursos %}
+"btn btn-success"
+{% endblock %}
+
+{% block botonentregables %}
+"btn btn-outline-primary"
+{% endblock %}
+
