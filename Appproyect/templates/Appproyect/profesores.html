@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "Appproyect/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}Area de Profesores{% endblock %}
+
+{% block contenido_cambia %}
+<h1>Profesores:</h1>
+<form action="{% url 'profesores' %}"  method="POST"> {% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type = "submit" value="GUARDAR DATOS DE PROFESOR">
+
+</form>
+
+    <h3>{{ mensaje }}</h3>
+{% endblock %}
+
+{% block botonprofes %}
+"btn btn-outline-warning"
+{% endblock %}

@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "Appproyect/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}Bienvenidos a la web de la UNIVERSIDAD DE SAN MARTÍN {% endblock %}
+
+{% block contenido_cambia %}
+    <h1>Inicio</h1>
+{% endblock %}
+
+{% block botonprofes %}
+"btn btn-warning"
+{% endblock %}
+
+{% block botonalumnos %}
+"btn btn-danger"
+{% endblock %}
+
+{% block botoncursos %}
+"btn btn-success"
+{% endblock %}
+
+{% block botonentregables %}
+"btn btn-outline-primary"
+{% endblock %}

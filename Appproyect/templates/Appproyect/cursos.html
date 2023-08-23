@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "Appproyect/padre.html" %}
+
+{% load static %}
+
+{% block titulo %} Area de Cursos {% endblock %}
+
+{% block contenido_cambia %}
+<h1>Cursos:</h1>
+<form action="{% url 'curso' %}"  method="POST"> {% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type = "submit" value="GUARDAR DATOS DEL CURSO">
+
+</form>
+
+    <h3>{{ mensaje }}</h3>
+{% endblock %}
+
+{% block botoncursos %}
+"btn btn-outline-success"
+{% endblock %}

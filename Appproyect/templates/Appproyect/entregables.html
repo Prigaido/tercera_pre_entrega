@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "Appproyect/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}Area de Entregables{% endblock %}
+
+{% block contenido_cambia %}
+<h1>Entregables:</h1>
+<form action="{% url 'entregables' %}"  method="POST"> {% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type = "submit" value="GUARDAR DATOS DE LA ENTREGA">
+
+</form>
+
+    <h3>{{ mensaje }}</h3>
+{% endblock %}
+
+{% block botonentregables %}
+"btn btn-primary"
+{% endblock %}
+
+
